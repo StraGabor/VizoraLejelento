@@ -1,2 +1,0 @@
-# VizoraLejelento
-Mobilalk projekt

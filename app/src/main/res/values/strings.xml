@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VizoraLejelento</string>
+    <string name="login">Bejelentkezes</string>
+    <string name="usr">Felhasznalonev</string>
+    <string name="pass">Jelszo</string>
+    <string name="regist">Regisztracio</string>
+    <string name="cancel">Megse</string>
+    <string name="repass">Jelszo ujra</string>
+    <string name="email">Email cim</string>
+</resources>
