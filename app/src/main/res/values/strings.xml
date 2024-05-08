@@ -7,4 +7,10 @@
     <string name="cancel">Megse</string>
     <string name="repass">Jelszo ujra</string>
     <string name="email">Email cim</string>
+    <string name="vizora_szama">Vizora szama</string>
+    <string name="oraallas">12345m3</string>
+    <string name="nev">Ugyfelnev</string>
+    <string name="befizetett">Befizetve: Nem</string>
+    <string name="diktal">Lejelentes</string>
+    <string name="lejelentes">Vizora allasa</string>
 </resources>

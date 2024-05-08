@@ -1,6 +1,7 @@
 package com.example.vizoralejelento;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,22 +17,24 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-
+    private static final String PREF_KEY = MainActivity.class.getPackage().toString();
     EditText usrText;
     EditText passwdText;
-
+    private SharedPreferences preferences;
     private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         usrText = findViewById(R.id.userName);
         passwdText = findViewById(R.id.passwd);
+        preferences = getSharedPreferences(PREF_KEY,MODE_PRIVATE);
         auth = FirebaseAuth.getInstance();
 
         /*EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -53,8 +56,18 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("userName",usrText.getText().toString());
+        editor.putString("password",passwdText.getText().toString());
+        editor.apply();
+    }
+
     private void startDiktate() {
-        Intent intent = new Intent(this,DiktateActivity.class);
+        Intent intent = new Intent(this,VizoraList.class);
         startActivity(intent);
     }
 

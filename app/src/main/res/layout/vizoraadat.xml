@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/azonosito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/vizora_szama"
+            android:textColor="?android:textColorSecondary" />
+
+        <EditText
+            android:id="@+id/oraallas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/azonosito"
+            android:padding="8dp"
+            android:text="@string/oraallas" />
+        
+        <EditText
+            android:id="@+id/ugyfelnev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/oraallas"
+            android:padding="8dp"
+            android:text="@string/nev" />
+        
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ugyfelnev"
+            android:padding="8dp"
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/befizetett"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email"
+            android:padding="8dp"
+            android:text="@string/befizetett" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

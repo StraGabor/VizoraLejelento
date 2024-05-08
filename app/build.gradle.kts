@@ -43,5 +43,16 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
     implementation ("com.google.firebase:firebase-auth")
     implementation ("com.google.android.gms:play-services-auth:19.0.0")
+    // recyle view and card
+    implementation ("androidx.recyclerview:recyclerview:1.1.0")
+    implementation ("androidx.recyclerview:recyclerview-selection:1.1.0")
+    implementation ("com.github.bumptech.glide:glide:3.7.0")
+    implementation ("androidx.cardview:cardview:1.0.0")
+    // layout and firestore and menu
+    implementation ("com.google.android.material:material:1.3.0")
+    implementation ("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation ("androidx.navigation:navigation-fragment:2.2.2")
+    implementation ("androidx.navigation:navigation-ui:2.2.2")
+    implementation ("com.google.firebase:firebase-firestore:21.4.3")
 
 }
