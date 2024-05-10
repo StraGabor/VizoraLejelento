@@ -102,7 +102,7 @@ public class VizoraAdapter extends RecyclerView.Adapter<VizoraAdapter.ViewHolder
             oraallas.setText(aktualis.getVizoraAllas());
             ugyfelnev.setText(aktualis.getUgyfelNeve());
             email.setText(aktualis.getEmail());
-            befizetett.setText(aktualis.isBefizetett() ? "igen":"nem");
+            befizetett.setText(aktualis.getBefizetett());
         }
     }
 

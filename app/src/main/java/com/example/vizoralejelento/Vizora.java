@@ -6,9 +6,9 @@ public class Vizora {
     private int vizoraAllas;
     private String ugyfelNeve;
     private String email;
-    private boolean befizetett;
+    private String befizetett;
 
-    public Vizora(int azonosito, int vizoraAllas, String ugyfelNeve, String email, boolean befizetett) {
+    public Vizora(int azonosito, int vizoraAllas, String ugyfelNeve, String email, String befizetett) {
         this.azonosito = azonosito;
         this.vizoraAllas = vizoraAllas;
         this.ugyfelNeve = ugyfelNeve;
@@ -16,11 +16,11 @@ public class Vizora {
         this.befizetett = befizetett;
     }
 
-    public boolean isBefizetett() {
+    public String getBefizetett() {
         return befizetett;
     }
 
-    public void setBefizetett(boolean befizetett) {
+    public void setBefizetett(String befizetett) {
         this.befizetett = befizetett;
     }
 

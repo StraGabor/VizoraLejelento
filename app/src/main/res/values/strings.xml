@@ -13,4 +13,34 @@
     <string name="befizetett">Befizetve: Nem</string>
     <string name="diktal">Lejelentes</string>
     <string name="lejelentes">Vizora allasa</string>
+
+    <array name="vizora_az">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </array>
+
+    <array name="vizora_allas">
+        <item>15248</item>
+        <item>00154</item>
+        <item>15200</item>
+    </array>
+
+    <string-array name="vizora_ugyfel">
+        <item>Bela</item>
+        <item>Pista</item>
+        <item>Janos</item>
+    </string-array>
+
+    <string-array name="mail">
+        <item>bela@gmail.com</item>
+        <item>pista@gmail.com</item>
+        <item>janos@gmail.com</item>
+    </string-array>
+
+    <string-array name="befizet">
+        <item>false</item>
+        <item>false</item>
+        <item>false</item>
+    </string-array>
 </resources>

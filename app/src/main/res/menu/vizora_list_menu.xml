@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/kilepes"
+        android:title="Kilepes"
+        app:showAsAction="never"
+        android:orderInCategory="100"/>
+
+    <item android:id="@+id/lejelentes"
+        android:title="Allas lejelentes"
+        app:showAsAction="never"
+        android:orderInCategory="2"/>
+
+    <item android:id="@+id/lista"
+        android:title="Allasok megtekintese"
+        app:showAsAction="never"
+        android:orderInCategory="1"/>
+
+</menu>
