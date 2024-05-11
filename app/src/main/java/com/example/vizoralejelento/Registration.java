@@ -17,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Registration extends AppCompatActivity {
+    private static final String TAG = Registration.class.getName();
     private static final String PREF_KEY = Registration.class.getPackage().toString();
     EditText user;
     EditText email;
@@ -52,6 +53,7 @@ public class Registration extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });*/
+        Log.i(TAG, "onCreate");
     }
 
     public void register(View view) {
@@ -76,7 +78,7 @@ public class Registration extends AppCompatActivity {
     }
 
     private void startDiktate() {
-        Intent intent = new Intent(this,VizoraList.class);
+        Intent intent = new Intent(this,Diktalas.class);
         startActivity(intent);
     }
 

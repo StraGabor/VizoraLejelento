@@ -1,87 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#93C7EF"
     tools:context=".Diktalas">
 
-        <TextView
-            android:id="@+id/diktalheader"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/top_margin"
-            android:text="@string/lejelentes"
-            android:textSize="24sp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/diktalheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/top_margin"
+        android:fontFamily="casual"
+        android:text="@string/lejelentes"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/azonosito"
+    <EditText
+        android:id="@+id/azonosito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diktalheader"
+        android:hint="@string/vizora_szama"
+        android:inputType="number"
+        android:padding="8dp"
+        android:textColor="?android:textColorSecondary"
+        android:textColorHighlight="@color/black" />
+
+    <EditText
+        android:id="@+id/oraallas"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/azonosito"
+        android:hint="@string/oraallas"
+        android:inputType="number"
+        android:padding="8dp"
+        android:textColorHighlight="@color/black" />
+
+    <EditText
+        android:id="@+id/ugyfelnev"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/oraallas"
+        android:hint="@string/nev"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColorHighlight="@color/black" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ugyfelnev"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:textColorHighlight="@color/black" />
+
+    <TextView
+        android:id="@+id/befizetett"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        android:padding="8dp"
+        android:text="@string/befizetett"
+        android:textColorHighlight="@color/black"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/befizetett"
+        android:layout_centerHorizontal="true"
+        android:background="#A9CEFB">
+
+        <Button
+            android:id="@+id/diktal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:inputType="text"
-            android:text="@string/vizora_szama"
-            android:layout_below="@id/diktalheader"
-            android:textColor="?android:textColorSecondary" />
+            android:layout_margin="5dp"
+            android:fontFamily="casual"
+            android:onClick="lementes"
+            android:text="@string/diktal"
+            android:textColor="@color/white"
+            android:textColorLink="@color/black"
+            android:textStyle="italic"
+            app:iconTint="@color/white" />
 
-        <EditText
-            android:id="@+id/oraallas"
+        <Button
+            android:id="@+id/megse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/azonosito"
-            android:inputType="number"
-            android:padding="8dp"
-            android:text="@string/oraallas" />
-
-        <EditText
-            android:id="@+id/ugyfelnev"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/oraallas"
-            android:inputType="text"
-            android:padding="8dp"
-            android:text="@string/nev" />
-
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ugyfelnev"
-            android:inputType="textEmailAddress"
-            android:padding="8dp"
-            android:text="@string/email" />
-
-        <TextView
-            android:id="@+id/befizetett"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/email"
-            android:padding="8dp"
-            android:text="@string/befizetett" />
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/befizetett"
-            android:layout_centerHorizontal="true">
-
-            <Button
-                android:id="@+id/diktal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@string/diktal" />
-
-            <Button
-                android:id="@+id/megse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@string/cancel" />
-        </LinearLayout>
+            android:layout_margin="5dp"
+            android:fontFamily="casual"
+            android:onClick="listazas"
+            android:text="@string/cancel" />
+    </LinearLayout>
 
 </RelativeLayout>

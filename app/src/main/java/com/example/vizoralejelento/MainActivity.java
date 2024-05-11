@@ -17,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = MainActivity.class.getName();
     private static final String PREF_KEY = MainActivity.class.getPackage().toString();
     EditText usrText;
     EditText passwdText;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         preferences = getSharedPreferences(PREF_KEY,MODE_PRIVATE);
         auth = FirebaseAuth.getInstance();
 
+        Log.i(TAG, "onCreate");
         /*EdgeToEdge.enable(this);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startDiktate() {
-        Intent intent = new Intent(this,VizoraList.class);
+        Intent intent = new Intent(this,Diktalas.class);
         startActivity(intent);
     }
 

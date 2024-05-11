@@ -13,7 +13,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
+        multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -54,5 +54,6 @@ dependencies {
     implementation ("androidx.navigation:navigation-fragment:2.2.2")
     implementation ("androidx.navigation:navigation-ui:2.2.2")
     implementation ("com.google.firebase:firebase-firestore:21.4.3")
+    implementation("com.android.support:multidex-instrumentation:1.0.3")
 
 }

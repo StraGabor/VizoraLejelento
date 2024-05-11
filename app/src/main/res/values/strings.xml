@@ -13,18 +13,30 @@
     <string name="befizetett">Befizetve: Nem</string>
     <string name="diktal">Lejelentes</string>
     <string name="lejelentes">Vizora allasa</string>
+    <string name="lediktalt_orallasok">Lediktalt orallasok</string>
+    <string name="lefotozas">Lefotozas</string>
+    <string name="befizetes">Befizet</string>
+    <string name="torol">Torles</string>
+    <string name="modositas">Modositas</string>
+    <string name="default_notification_channel_id">vizora_ertesito</string>
 
-    <array name="vizora_az">
+    <string-array name="vizora_az">
+        <item>120</item>
+        <item>121</item>
+        <item>122</item>
+    </string-array>
+
+    <string-array name="id">
         <item>1</item>
         <item>2</item>
         <item>3</item>
-    </array>
+    </string-array>
 
-    <array name="vizora_allas">
+    <string-array name="vizora_allas">
         <item>15248</item>
         <item>00154</item>
         <item>15200</item>
-    </array>
+    </string-array>
 
     <string-array name="vizora_ugyfel">
         <item>Bela</item>

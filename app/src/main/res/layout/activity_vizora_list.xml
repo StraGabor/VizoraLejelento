@@ -5,13 +5,27 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#93C7EF"
     tools:context=".VizoraList">
 
+    <TextView
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:id="@+id/lediktalt_cim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lediktalt_orallasok"
+        android:textColor="@color/black"
+        android:background="@color/common_google_signin_btn_text_light_focused"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="50dp"
         android:id="@+id/vizoraLista"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
+        android:background="#93C7EF"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

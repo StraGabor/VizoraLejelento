@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.TextView;
@@ -31,7 +33,7 @@ public class VizoraAdapter extends RecyclerView.Adapter<VizoraAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_vizora_list,parent,false));
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.vizoraadat,parent,false));
     }
 
     @Override
@@ -39,6 +41,12 @@ public class VizoraAdapter extends RecyclerView.Adapter<VizoraAdapter.ViewHolder
         Vizora aktualis = vizoraAdatok.get(position);
 
         holder.bindTo(aktualis);
+
+        if(holder.getAdapterPosition() > lastPosition) {
+            Animation animation = AnimationUtils.loadAnimation(context, R.anim.slide_in_row);
+            holder.itemView.startAnimation(animation);
+            lastPosition = holder.getAdapterPosition();
+        }
     }
 
     @Override
@@ -82,11 +90,11 @@ public class VizoraAdapter extends RecyclerView.Adapter<VizoraAdapter.ViewHolder
     };
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        EditText azonosito;
-        EditText oraallas;
-        EditText ugyfelnev;
-        EditText email;
-        TextView befizetett;
+        private EditText azonosito;
+        private EditText oraallas;
+        private EditText ugyfelnev;
+        private EditText email;
+        private TextView befizetett;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -97,12 +105,15 @@ public class VizoraAdapter extends RecyclerView.Adapter<VizoraAdapter.ViewHolder
             befizetett = itemView.findViewById(R.id.befizetett);
         }
 
-        public void bindTo(Vizora aktualis) {
+        public void bindTo(@NonNull Vizora aktualis) {
             azonosito.setText(aktualis.getAzonosito());
             oraallas.setText(aktualis.getVizoraAllas());
             ugyfelnev.setText(aktualis.getUgyfelNeve());
             email.setText(aktualis.getEmail());
             befizetett.setText(aktualis.getBefizetett());
+
+            itemView.findViewById(R.id.torol).setOnClickListener(view -> ((VizoraList)context).torles(aktualis));
+            itemView.findViewById(R.id.ujradiktal).setOnClickListener(view -> ((VizoraList)context).modositas(aktualis));
         }
     }
 
